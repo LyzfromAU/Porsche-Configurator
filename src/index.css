@@ -1,13 +1,172 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.menu-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid blueviolet;
+}
+.mode-icon {
+  min-width: 50px;
+  min-height: 50px;
+  cursor: pointer;
+  margin: 10px 30px 0 70px;
+}
+.menu-img{
+  margin: 10px 70px 0 30px;
+}
+.menu-nav{
+  text-align: center;
+  height: 75px;
+  padding-top: 25px;
+  width: 100%;
+  cursor: pointer;
+}
+.menu-nav-active{
+  text-align: center;
+  border-bottom: 5px solid blueviolet;
+  height: 75px;
+  padding-top: 25px;
+  width: 100%;
+  cursor: pointer;
+}
+.car-img{
+  width: 80%;
+  margin: 10% 0 20px 10%;
+}
+.title{
+  margin: 30px 0;
+}
+.para{
+  width: 70%;
+  margin-top: 10px;
+}
+.btns-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.btns{
+  width: 70%;
+  height: 45px;
+  border: 2px solid blueviolet;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  font-size: large;
+}
+.btns-dark{
+  width: 70%;
+  height: 45px;
+  border: 2px solid blueviolet;
+  background-color: #3b3231;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  font-size: large;
+}
+.btns:hover{
+  color: white;
+  background-color: lightblue;
+}
+.footer{
+  height: 60px;
+}
+.left-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.performance{
+  margin-right: 20px;
+  font-size: large;
+}
+.right-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.color-btn-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.color-btn{
+  width: 15%;
+  padding-top: 15%;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  margin-right: 15px;
+  background-size: cover;
+}
+.btn-white{
+  background-color: white;
+}
+.btn-green{
+  background-color: green;
+}
+.btn-blue{
+  background-color: blue
+}
+.btn-black{
+  background-color: black;
+}
+.btn-red{
+  background-color: red;
+}
+.btn-silver{
+  background-color: silver
+}
+.btn-grey{
+  background-color: grey;
+}
+.btn-orange{
+  background-color:orange;
+}
+.color-description{
+  width: 88%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.color-price-offset{
+  margin-right: 15px;
+}
+.wheel-btn{
+  width: 15%;
+  padding-top: 15%;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  margin-right: 15px;
+  background-size: cover;
+}
+.summary-item{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.summary-sub{
+  font-size: large;
+  margin-right: 30px;
+}
+.total{
+  font-size: x-large;
+  font-weight: bolder;
+}
+.btn-next{
+  width: 100px;
+  border-radius: 10px;
+  background-color: orchid;
+  border: 2px solid orchid;
+  margin: 0 50px;
+}
+@media (max-width: 776px){
+  .menu-nav{
+    display: none;
+  }
+  .menu-nav-active{
+    display: none;
+  }
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

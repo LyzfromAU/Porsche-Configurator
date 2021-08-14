@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Menu from './components/Menu';
+import Content from './components/Content';
+import { models, interior, color, wheel } from './Data';
+import Footer from './components/Footer';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { useSelector } from 'react-redux';
+
+const GlobalStyle = createGlobalStyle`
+body {
+  background-color: ${props => props.theme.mode === 'dark'?'#3b3231':'#EEE'};
+  color: ${props => props.theme.mode === 'dark'?'#EEE':'#3b3231'};
+}
+`
 
 function App() {
+  const theme = useSelector(state=>state.theme);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={{ mode: theme }}>
+      <>
+        <GlobalStyle />
+        <Menu />
+        <Content data={models} interior={interior} color={color} wheel={wheel}/>
+        <Footer data={models} interior={interior} color={color} wheel={wheel}/>
+      </>
+    </ThemeProvider>
   );
-}
-
+};
 export default App;
